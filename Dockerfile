@@ -1,2 +1,4 @@
-FROM alpine:3.19
-RUN apk add --no-cache wireguard-tools iptables
+FROM debian:latest
+RUN apt-get -y update
+RUN apt-get -y install reprepro
+RUN apt-get -y upgrade

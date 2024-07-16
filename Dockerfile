@@ -1,5 +1,2 @@
-FROM ubuntu:latest
-
-RUN apt-get update && \
-  DEBIAN_FRONTEND=noninteractive apt-get install -yq --no-install-recommends \
-  gnupg reprepro openssh-server
+FROM alpine:3.19
+RUN apk add --no-cache wireguard-tools iptables

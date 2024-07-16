@@ -1,4 +1,5 @@
 FROM debian
-RUN apt-get update
-RUN apt-get -y install reprepro
-RUN apt-get upgrade
+
+RUN apt-get update && \
+  DEBIAN_FRONTEND=noninteractive apt-get install -yq --no-install-recommends \
+  gnupg reprepro openssh-server

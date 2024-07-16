@@ -1,6 +1,9 @@
 name: Build
 on:
   push:
+  commit:
+    branches:
+      - main
     branches:
       - main
   pull_request:

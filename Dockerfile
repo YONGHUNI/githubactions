@@ -1,6 +1,2 @@
-FROM debian
-
-RUN apt-get update && \
-  DEBIAN_FRONTEND=noninteractive apt-get install -yq --no-install-recommends \
-  gnupg reprepro openssh-server
-
+FROM debian:bookworm
+RUN apt-get -y update && apt-get -y install reprepro && rm -rf /var/lib/apt/lists/*
